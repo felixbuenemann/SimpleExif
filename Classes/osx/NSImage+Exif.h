@@ -6,6 +6,8 @@
 //
 //
 
+#import <TargetConditionals.h>
+#if TARGET_OS_OSX
 #import <Cocoa/Cocoa.h>
 
 @class ExifContainer;
@@ -15,3 +17,4 @@
 + (NSData *)getAppendedDataForImageData:(NSData *)imageData exif:(ExifContainer *)container;
 
 @end
+#endif

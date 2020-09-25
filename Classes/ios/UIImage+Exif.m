@@ -6,9 +6,15 @@
 //
 //
 
+#import <TargetConditionals.h>
+#if TARGET_OS_IPHONE || TARGET_OS_MACCATALYST
 #import <ImageIO/ImageIO.h>
 #import "UIImage+Exif.h"
+#if SWIFT_PACKAGE
+#import "../ExifContainer.h"
+#else
 #import "ExifContainer.h"
+#endif
 
 @implementation UIImage (Exif)
 
@@ -47,3 +53,4 @@
 }
 
 @end
+#endif
