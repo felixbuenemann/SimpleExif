@@ -82,7 +82,7 @@ NSString const * kCGImagePropertyProjection = @"ProjectionType";
 
 - (void)addUserComment:(NSString*)comment {
     
-    NSString *key = kCGImagePropertyExifUserComment;
+    NSString *key = (NSString *)kCGImagePropertyExifUserComment;
     [self setValue:comment forExifKey:key];
     
 }
@@ -90,7 +90,7 @@ NSString const * kCGImagePropertyProjection = @"ProjectionType";
 - (void)addCreationDate:(NSDate *)date {
     
     NSString *dateString = [self getUTCFormattedDate:date];
-    NSString *key = kCGImagePropertyExifDateTimeOriginal;
+    NSString *key = (NSString *)kCGImagePropertyExifDateTimeOriginal;
     [self setValue:dateString forExifKey:key];
 
 }
@@ -103,7 +103,8 @@ NSString const * kCGImagePropertyProjection = @"ProjectionType";
 
 - (void)addProjection:(NSString *)projection {
 
-    [self setValue:projection forExifKey:kCGImagePropertyProjection];
+    NSString *key = (NSString *)kCGImagePropertyProjection;
+    [self setValue:projection forExifKey:key];
 
 }
 
