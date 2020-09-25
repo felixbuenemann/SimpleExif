@@ -6,6 +6,8 @@
 //
 //
 
+#import <TargetConditionals.h>
+#if TARGET_OS_IPHONE || TARGET_OS_MACCATALYST
 #import <UIKit/UIKit.h>
 
 @class ExifContainer;
@@ -15,3 +17,4 @@
 - (NSData *)addExif:(ExifContainer *)container;
 
 @end
+#endif
