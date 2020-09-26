@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SimpleExif"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Simple exif is a pod that allows you to add Exif data to any UIImage in your app. You can add location, timestamp and user comments."
   s.homepage     = "https://github.com/Nikita2k/SimpleExif"
   s.license      = { :type => "GNU", :file => "LICENSE" }
